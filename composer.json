@@ -1,0 +1,26 @@
+{
+    "name": "fyrts/psr-4-case-checker",
+    "type": "library",
+    "description": "Filename validator for PSR-4 autoloader case-sensitivity issues.",
+    "keywords": ["autoload", "case sensitive", "case sensitivity", "PSR-4", "PHP"],
+    "license": "MIT",
+    "require": {
+        "php": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.4"
+    },
+    "autoload": {
+        "psr-4": { "PSR4CaseChecker\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "PSR4CaseChecker\\Tests\\": "tests/"},
+        "files": [
+            "src/Init.php"
+        ]
+    },
+    "scripts": {
+        "test": "@php ./vendor/bin/phpunit --colors",
+        "test-coverage": "@php ./vendor/bin/phpunit --colors --coverage-html ./coverage"
+    }
+}
